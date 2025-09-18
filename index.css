@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --aeesb-green-dark-hsl: 158 100% 15%; /* Example: Dark Green like #004d25 */
+    --aeesb-gold-hsl: 43 74% 49%; /* Example: Gold like #DAA520 */
+    --aeesb-white-hsl: 0 0% 100%;
+
+    --background: var(--aeesb-white-hsl);
+    --foreground: 224 71.4% 4.1%; /* Default dark text from shadcn */
+
+    --card: var(--aeesb-white-hsl);
+    --card-foreground: 224 71.4% 4.1%;
+
+    --popover: var(--aeesb-white-hsl);
+    --popover-foreground: 224 71.4% 4.1%;
+
+    --primary: var(--aeesb-green-dark-hsl);
+    --primary-foreground: var(--aeesb-white-hsl);
+
+    --secondary: var(--aeesb-gold-hsl);
+    --secondary-foreground: 224 71.4% 4.1%; /* Dark text on gold */
+
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220 8.9% 46.1%;
+
+    --destructive: 0 72.2% 50.6%;
+    --destructive-foreground: var(--aeesb-white-hsl);
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: var(--aeesb-gold-hsl); /* Ring color to gold for focus */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Define dark mode colors if needed later */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: theme('fontFamily.sans');
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+  
